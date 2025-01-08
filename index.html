@@ -5,20 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Canzoni per categorie</title>
   <style>
-    /* Global Styles */
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif, Oxygen-Sans, Ubuntu, Cantarell;
     }
-
-    .narrow-font {
-      font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial Narrow, Arial, sans-serif;
-    }
-
-    .section {
-      padding-top: 0;
-    }
-
+    
     .section:not(:first-of-type) {
       margin-top: 20px;
     }
@@ -32,8 +23,6 @@
       font-size: 24px;
       font-weight: bold;
       margin: 0;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
     }
 
     .header.box-shadow {
@@ -44,8 +33,6 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      font-family: Arial, sans-serif;
-      font-weight: normal;
     }
 
     .song-list li {
@@ -55,7 +42,7 @@
     }
 
     .song-list li.selected {
-      background-color: #80bfff; /* Darker and more saturated light blue */
+      background-color: #80bfff;
     }
 
     .bottom-section {
@@ -78,7 +65,6 @@
       max-height: 30%;
       word-wrap: break-word;
       line-height: 1.5;
-      font-family: "Arial Narrow", sans-serif;
     }
 
     #copy-button {
@@ -94,7 +80,6 @@
       cursor: pointer;
       display: none; /* Hidden by default */
       z-index: 1100;
-      font-family: "Arial", sans-serif;
       font-weight: bold;
     }
 
@@ -104,7 +89,8 @@
 
     #arrow-buttons {
       position: fixed;
-      bottom: 6px;
+      bottom: 0;
+      margin-bottom: 20px;
       right: 16px;
       display: flex;
       gap: 16px;
@@ -114,17 +100,10 @@
     #arrow-buttons button {
       background-color: white;
       border: 1px solid #555;
-      padding: 10px 12px;
+      height: 50px;
+      width: 50px;
       border-radius: 50%;
       cursor: pointer;
-    }
-
-    #arrow-buttons svg {
-      fill: #000;
-    }
-
-    #arrow-buttons button:hover svg {
-      fill: #555;
     }
   </style>
 </head>
@@ -132,18 +111,18 @@
   <div id="arrow-buttons">
     <button id="prev-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M 12 23 q -1.4 0 -1.4 -1.4 v -16 l -5 5 q -1 1 -2 0 q -1 -1 0 -2 l 7 -7 q 1.4 -1.4 2.8 0 l 7 7 q 1 1 0 2 q -1 1 -2 0 l -5 -5 v 16 q 0 1.4 -1.4 1.4 z" fill="#000"/>
+        <path d="M 12 24 q -1.4 0 -1.4 -1.4 v -16 l -5 5 q -1 1 -2 0 q -1 -1 0 -2 l 7 -7 q 1.4 -1.4 2.8 0 l 7 7 q 1 1 0 2 q -1 1 -2 0 l -5 -5 v 16 q 0 1.4 -1.4 1.4 z" fill="#000"/>
       </svg>
     </button>
     <button id="next-button">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 1 q1.4 -0 1.4 1.4 v16 l5 -5 q1 -1 2-0 1 1 0 2 l-7 7 q-1.4 1.4-2.8 0 l-7-7 q-1 -1 -0 -2 1 -1 2 -0 l5 5 v-16 q-0 -1.4 1.4 -1.4 z" fill="#000"/>
+        <path d="M12 1.6 q1.4 -0 1.4 1.4 v16 l5 -5 q1 -1 2-0 1 1 0 2 l-7 7 q-1.4 1.4-2.8 0 l-7-7 q-1 -1 -0 -2 1 -1 2 -0 l5 5 v-16 q-0 -1.4 1.4 -1.4 z" fill="#000"/>
       </svg>
     </button>
   </div>
   <div class="section">
     <div class="header">Ingresso</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>2. Acqua siamo noi</li>
       <li>15. Amico fratello e padre</li>
       <li>16. Amo la vita</li>
@@ -219,7 +198,7 @@
   </div>
   <div class="section">
     <div class="header">Salmo</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>30. Cantico dei redenti</li>
       <li>40. Com'è bello come dà gioia</li>
       <li>51. Dall'aurora al tramonto</li>
@@ -240,7 +219,7 @@
   </div>
   <div class="section">
     <div class="header">Alleluja</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>3. Alleluja (Cantate al Signore)</li>
       <li>4. Alleluja (Cantate al Signore – Frisina)</li>
       <li>5. Alleluja (Canto per Cristo)</li>
@@ -257,7 +236,7 @@
   </div>
   <div class="section">
     <div class="header">Offertorio</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>1. Accogli i nostri doni</li>
       <li>25. Benedici o Signore</li>
       <li>32. Canto dell'uomo</li>
@@ -281,12 +260,27 @@
       <li>190. Ti offriamo Signore</li>
       <li>199. Tutta la mia vita</li>
       <li>219. Voi siete di Dio</li>
-      
+    </ul>
+  </div>
+  <div class="section">
+    <div class="header">Santo</div>
+    <ul class="song-list">
+      <li>153. Santo (Altezze)</li>
+      <li>154. Santo (Bonfitto)</li>
+      <li>155. Santo (Gen Rosso Verde)</li>
+      <li>156. Santo (Gen Rosso)</li>
+      <li>157. Santo (Gen Verde)</li>
+      <li>158. Santo (Ricci)</li>
+      <li>159. Santo (Rock)</li>
+      <li>160. Santo (Scout)</li>
+      <li>161. Santo (Spoladore)</li>
+      <li>162. Santo (Zaire)</li>
+      <li>161. Santo (_)</li>
     </ul>
   </div>
   <div class="section">
     <div class="header">Comunione</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>20. Ascolta</li>
       <li>22. Ave Maria (Verbum Panis)</li>
       <li>24. Beato il cuore (Inno GMG 2016)</li>
@@ -312,7 +306,7 @@
       <li>60. Ecco quel che abbiamo</li>
       <li>65. Fratello sole, sorella luna</li>
       <li>72. Grandi cose</li>
-      <li>76. il pane del cammino</li>
+      <li>76. Il pane del cammino</li>
       <li>78. Il Signore è il mio pastore</li>
       <li>81. In notte placida</li>
       <li>82. In questa notte splendida</li>
@@ -365,7 +359,7 @@
   </div>
   <div class="section">
     <div class="header">Finale</div>
-    <ul class="song-list narrow-font">
+    <ul class="song-list">
       <li>2. Acqua siamo noi</li>
       <li>15. Amico fratello e padre</li>
       <li>17. Andate per le strade</li>
@@ -413,6 +407,230 @@
       <li>219. Voi siete di Dio</li>
     </ul>
   </div>
+<div class="section">
+  <div class="header">Tutti i canti</div>
+  <ul class="song-list">
+    <li>1. Accogli i nostri doni</li>
+    <li>2. Acqua siamo noi</li>
+    <li>3. Alleluja (Cantate al Signore)</li>
+    <li>4. Alleluja (Cantate al Signore – Frisina)</li>
+    <li>5. Alleluja (Canto per Cristo)</li>
+    <li>6. Alleluja (Chiama ed io)</li>
+    <li>7. Alleluja (Ed oggi ancora)</li>
+    <li>8. Alleluja (La nostra festa)</li>
+    <li>9. Alleluja (La parola tua)</li>
+    <li>10. Alleluja (Passeranno i cieli)</li>
+    <li>11. Alleluja (Questa tua parola)</li>
+    <li>12. Alleluja (Se avremo il coraggio)</li>
+    <li>13. Alleluja (Su battete con noi le mani)</li>
+    <li>14. Alleluja (Surrexit Christus)</li>
+    <li>15. Amico fratello e padre</li>
+    <li>16. Amo la vita</li>
+    <li>17. Andate per le strade</li>
+    <li>18. Andrò a vederla un dì</li>
+    <li>19. Apri i miei occhi Signore</li>
+    <li>20. Ascolta</li>
+    <li>21. Astro del ciel</li>
+    <li>22. Ave Maria (Verbum Panis)</li>
+    <li>23. Beati sarete voi</li>
+    <li>24. Beato il cuore (Inno GMG 2016)</li>
+    <li>25. Benedici o Signore</li>
+    <li>26. Benedizione a Frate Leone</li>
+    <li>27. Camminerò</li>
+    <li>28. Camminiamo sulla strada</li>
+    <li>29. Canta e cammina</li>
+    <li>30. Cantico dei redenti</li>
+    <li>31. Canto dell'amore</li>
+    <li>32. Canto dell'uomo</li>
+    <li>33. Canto della creazione</li>
+    <li>34. Canzone dell'amicizia</li>
+    <li>35. Canzone di S.Damiano</li>
+    <li>36. Che gioia ci dà</li>
+    <li>37. Chiara è la tua parola</li>
+    <li>38. Chiesa di Dio</li>
+    <li>39. Cieli e terra nova</li>
+    <li>40. Com'è bello come dà gioia</li>
+    <li>41. Come è grande</li>
+    <li>42. Come Maria</li>
+    <li>43. Come ti ama Dio</li>
+    <li>44. Come tu mi vuoi</li>
+    <li>45. Come un fiume</li>
+    <li>46. Con il mio canto</li>
+    <li>47. Con te faremo cose grandi</li>
+    <li>48. Credo in te Signore</li>
+    <li>49. Credo in unum Deum</li>
+    <li>50. Cristo risusciti</li>
+    <li>51. Dall'aurora al tramonto</li>
+    <li>52. Danza la vita</li>
+    <li>53. Dell'aurora</li>
+    <li>54. Di te vorrei</li>
+    <li>55. Dio è Padre</li>
+    <li>56. Dio s'è fatto come noi</li>
+    <li>57. Dov'è carità</li>
+    <li>58. Dove troveremo tutto il pane</li>
+    <li>59. È bello lodarti</li>
+    <li>60. Ecco quel che abbiamo</li>
+    <li>61. È giunta l'ora</li>
+    <li>61. È lui Gesù</li>
+    <li>63. È più bello insieme</li>
+    <li>64. Fammi sentire la tua voce</li>
+    <li>65. Fratello sole, sorella luna</li>
+    <li>66. Frutto della nostra terra</li>
+    <li>67. Gioia che invade l'anima</li>
+    <li>68. Giovane donna</li>
+    <li>69. Gloria (Giombini)</li>
+    <li>70. Gloria a Dio (Gen Verde)</li>
+    <li>71. Gloria dal basso della terra</li>
+    <li>72. Grandi cose</li>
+    <li>73. Guarda questa offerta</li>
+    <li>74. I cieli</li>
+    <li>75. Il coraggio nei piedi</li>
+    <li>76. Il pane del cammino</li>
+    <li>77. Il Signore arriverà</li>
+    <li>78. Il Signore è il mio pastore</li>
+    <li>79. Il Signore è la luce</li>
+    <li>80. Innalzate nei cieli</li>
+    <li>81. In notte placida</li>
+    <li>82. In questa notte splendida</li>
+    <li>83. Invochiamo la tua presenza</li>
+    <li>84. Io credo in te Gesù</li>
+    <li>85. Io sorrido a te</li>
+    <li>86. Io vedo la tua luce</li>
+    <li>87. Jesus Christ you are my life</li>
+    <li>88. L'amore di Dio</li>
+    <li>89. La preghiera di Gesù è la nostra</li>
+    <li>90. Le tue mani son piene di fiori</li>
+    <li>91. Le tue parole sono canti</li>
+    <li>92. Lode al nome tuo</li>
+    <li>93. Lode e gloria</li>
+    <li>94. Lode e gloria a te</li>
+    <li>95. Lo Spirito di Cristo</li>
+    <li>96. Luce siamo noi</li>
+    <li>97. L'unico maestro</li>
+    <li>98. Madre dolcissima</li>
+    <li>99. Manda il tuo spirito</li>
+    <li>100. Mani</li>
+    <li>101. Mani che si stringono</li>
+    <li>102. Metti in me Signore il vero amore</li>
+    <li>103. Mia gioia sei</li>
+    <li>104. Mistero della cena</li>
+    <li>105. Musica di festa</li>
+    <li>106. Nel nome tuo</li>
+    <li>107. Nelle mani tue</li>
+    <li>108. Nelle tue mani</li>
+    <li>109. Noi canteremo gloria a te</li>
+    <li>110. Noi veglieremo</li>
+    <li>111. Nulla è impossibile a Dio</li>
+    <li>112. Oggi ti chiamo</li>
+    <li>113. Oggi ti preghiamo Giuseppe</li>
+    <li>114. Ogni mia parola</li>
+    <li>115. Ora è tempo di gioia</li>
+    <li>116. Osanna al figlio di David</li>
+    <li>117. Pace (Hevenu Shalom)</li>
+    <li>118. Pace (La pace viene dall'alto)</li>
+    <li>119. Pace (Ti do la pace)</li>
+    <li>120. Pace (Varanavà)</li>
+    <li>121. Pace (Vi lascio la mia pace)</li>
+    <li>122. Pace a te</li>
+    <li>123. Pace a te fratello mio</li>
+    <li>124. Pace dei giovani</li>
+    <li>125. Pace sia pace a voi</li>
+    <li>126. Padre nostro</li>
+    <li>127. Padre nostro ascoltaci</li>
+    <li>128. Pane del cielo</li>
+    <li>129. Pane di vita nuova</li>
+    <li>130. Parlami Signore</li>
+    <li>131. Per questi nostri amici</li>
+    <li>132. Popoli tutti</li>
+    <li>133. Preconio pasquale</li>
+    <li>134. Preferisco il paradiso</li>
+    <li>135. Preghiera a Maria</li>
+    <li>136. Preghiera a S. Giuseppe</li>
+    <li>137. Purificami o Signore</li>
+    <li>138. Quale gioia</li>
+    <li>139. Quando busserò</li>
+    <li>140. Quando il primo sole</li>
+    <li>141. Quanta sete nel mio cuore</li>
+    <li>142. Quella notte</li>
+    <li>143. Questa è la mia fede</li>
+    <li>144. Qui per te</li>
+    <li>145. Rallegriamoci</li>
+    <li>146. Resta accanto a me</li>
+    <li>147. Resta con noi Signore la sera</li>
+    <li>148. Resta qui con noi</li>
+    <li>149. Resurrezione</li>
+    <li>150. Salmo 116</li>
+    <li>151. Salve Regina</li>
+    <li>152. Santa Maria del cammino</li>
+    <li>153. Santo (Altezze)</li>
+    <li>154. Santo (Bonfitto)</li>
+    <li>155. Santo (Gen Rosso Verde)</li>
+    <li>156. Santo (Gen Rosso)</li>
+    <li>157. Santo (Gen Verde)</li>
+    <li>158. Santo (Ricci)</li>
+    <li>159. Santo (Rock)</li>
+    <li>160. Santo (Scout)</li>
+    <li>161. Santo (Spoladore)</li>
+    <li>162. Santo (Zaire)</li>
+    <li>161. Santo (_)</li>
+    <li>164. Scusa Signore</li>
+    <li>165. Se m'accogli</li>
+    <li>166. Se qualcuno ha dei beni</li>
+    <li>167. Segni del tuo amore</li>
+    <li>168. Sei fuoco e vento</li>
+    <li>169. Sei tu Signore il pane</li>
+    <li>170. Semina la pace</li>
+    <li>171. Servo per amore</li>
+    <li>172. Siamo qui riuniti</li>
+    <li>173. Signore ascolta Padre perdona</li>
+    <li>174. Signore tu sei nato</li>
+    <li>175. So che tu sei Padre</li>
+    <li>176. Sono qui a lodarti</li>
+    <li>177. Spalancate le porte a Cristo</li>
+    <li>178. Stai con me</li>
+    <li>179. Su ali d'aquila</li>
+    <li>180. Sui passi del Murialdo</li>
+    <li>181. Sulla tua parola</li>
+    <li>182. Sulle orme</li>
+    <li>183. Svegliati Sion</li>
+    <li>184. Symbolum 77</li>
+    <li>185. Symbolum 78</li>
+    <li>186. Symbolum 80</li>
+    <li>187. Te al centro del mio cuore</li>
+    <li>188. Te lodiamo Trinità</li>
+    <li>189. Ti esalto Dio mio re</li>
+    <li>190. Ti offriamo Signore</li>
+    <li>191. Ti ringrazio mio Signore</li>
+    <li>192. Ti ringrazio o mio Signore</li>
+    <li>193. Ti saluto o Croce Santa</li>
+    <li>194. Tu che ami la vita</li>
+    <li>195. Tu mi amavi già</li>
+    <li>196. Tu qui</li>
+    <li>197. Tu scendi dalle stelle</li>
+    <li>198. Tu sei</li>
+    <li>199. Tutta la mia vita</li>
+    <li>200. Tutta la terra attende</li>
+    <li>201. Tutto quello che vi dirà</li>
+    <li>202. Vengo in mezzo a voi</li>
+    <li>203. Veniamo da te</li>
+    <li>204. Venite al Signore</li>
+    <li>205. Venite fedeli</li>
+    <li>206. Verbum panis</li>
+    <li>207. Verrà su di voi</li>
+    <li>208. Vieni al Signor</li>
+    <li>209. Vieni e seguimi</li>
+    <li>210. Vieni Santo Spirito</li>
+    <li>211. Vieni Santo Spirito</li>
+    <li>212. Vieni Spirito</li>
+    <li>213. Vieni vieni Spirito d'amore</li>
+    <li>214. Vita di risurrezione</li>
+    <li>215. Vivere la vita</li>
+    <li>216. Vocazione</li>
+    <li>217. Voglio cantare al Signor</li>
+    <li>218. Voglio esaltare</li>
+    <li>219. Voi siete di Dio</li>
+  </ul>
+</div>
   <div class="bottom-section">
     <div id="selected-box">
       <button id="copy-button">COPIA</button>
@@ -420,21 +638,62 @@
   </div>
 
   <script>
+    // Constants and variables
     const selectedBox = document.getElementById("selected-box");
     const copyButton = document.getElementById("copy-button");
     const arrowButtons = document.getElementById("arrow-buttons");
-
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
     let currentHeader = 0;
-
-    // Array to store all headers / Function to populate it
     let headersArray = [];
-    window.addEventListener("load", () => {headersArray = Array.from(document.querySelectorAll(".header"));});
+
+    // Event listnerers
+    window.addEventListener("load", ()=>{
+      headersArray = Array.from(document.querySelectorAll(".header"));
+      updateHeaders();
+    });
+    document.addEventListener("scroll", ()=>{
+      updateHeaders();
+    });
+    document.addEventListener("click", ()=>{
+      if (event.target.tagName === "LI") {
+        event.target.classList.toggle("selected");
+        updateBottomSection();
+      }
+    });
+    prevButton.addEventListener("click", ()=>scrollHeader(-1));
+    nextButton.addEventListener("click", ()=>scrollHeader(+1));
+    copyButton.addEventListener("click", ()=>copySelectedSongs());
+
+    // Function to copy the selected songs
+    function copySelectedSongs() {
+      const selectedSongs = document.querySelectorAll(".song-list li.selected");
+      const selectedTitles = Array.from(selectedSongs).map(song => song.textContent).join("\n");
+      navigator.clipboard.writeText(selectedTitles).then(() => {
+        const copiedDiv = document.createElement("div");
+        copiedDiv.textContent = "Lista copiata";
+        copiedDiv.style.position = "fixed";
+        copiedDiv.style.top = selectedBox.getBoundingClientRect().top + "px";
+        copiedDiv.style.left = selectedBox.getBoundingClientRect().left + "px";
+        copiedDiv.style.width = selectedBox.offsetWidth + "px";
+        copiedDiv.style.height = selectedBox.offsetHeight + "px";
+        copiedDiv.style.backgroundColor = "#009900";
+        copiedDiv.style.color = "white";
+        copiedDiv.style.fontWeight = "bold";
+        copiedDiv.style.display = "flex";
+        copiedDiv.style.alignItems = "center";
+        copiedDiv.style.justifyContent = "center";
+        copiedDiv.style.borderRadius = getComputedStyle(selectedBox).borderRadius;
+        copiedDiv.style.zIndex = "1100"; // Ensure it stays in front of selected-box
+        document.body.appendChild(copiedDiv);
+        setTimeout(()=>{document.body.removeChild(copiedDiv);}, 1000);
+      });
+    }
   
-    // Function to update the selected songs box
-    function updateSelectedBox() {
+    // Function to update the bottom section (selected-box + arrows)
+    function updateBottomSection() {
       const selectedSongs = document.querySelectorAll(".song-list li.selected");
       const selectedTitles = Array.from(selectedSongs).map(song => song.textContent);
-  
       if (selectedTitles.length > 0) {
         selectedBox.style.display = "block";
         copyButton.style.display = "block";
@@ -444,109 +703,36 @@
         selectedBox.style.display = "none";
         copyButton.style.display = "none";
       }
-  
-      updateArrowButtonsPosition();
+      arrowButtons.style.bottom = `${selectedBox.offsetHeight}px`;
     }
-  
-    // Function to update the position of the arrow buttons
-    function updateArrowButtonsPosition() {
-      const selectedBoxHeight = selectedBox.offsetHeight;
-      arrowButtons.style.bottom = `${selectedBoxHeight + 20}px`; // Adjust the offset as needed
-    }
-  
-    // Add event listener for song selection
-    document.addEventListener("click", event => {
-      if (event.target.tagName === "LI") {
-        event.target.classList.toggle("selected");
-        updateSelectedBox();
-      }
-    });
-  
-    // Copy button functionality
-    copyButton.addEventListener("click", () => {
-      const selectedSongs = document.querySelectorAll(".song-list li.selected");
-      const selectedTitles = Array.from(selectedSongs).map(song => song.textContent).join("\n");
-      navigator.clipboard.writeText(selectedTitles).then(() => {
-      const copiedDiv = document.createElement("div");
-      copiedDiv.textContent = "Lista copiata";
-      copiedDiv.style.position = "fixed";
-      copiedDiv.style.top = selectedBox.getBoundingClientRect().top + "px";
-      copiedDiv.style.left = selectedBox.getBoundingClientRect().left + "px";
-      copiedDiv.style.width = selectedBox.offsetWidth + "px";
-      copiedDiv.style.height = selectedBox.offsetHeight + "px";
-      copiedDiv.style.backgroundColor = "#009900";
-      copiedDiv.style.color = "white";
-      copiedDiv.style.fontWeight = "bold";
-      copiedDiv.style.display = "flex";
-      copiedDiv.style.alignItems = "center";
-      copiedDiv.style.justifyContent = "center";
-      copiedDiv.style.zIndex = "1100"; // Ensure it stays in front of selected-box
-      copiedDiv.style.borderRadius = getComputedStyle(selectedBox).borderRadius; // Copy border-radius
-      document.body.appendChild(copiedDiv);
 
-      setTimeout(() => {
-        document.body.removeChild(copiedDiv);
-      }, 1000);
-      });
-    });
-  
-    // Shadow of topmost header if said header covers list
-  function updateHeaders() {
-    headersArray.forEach(header => {
-      const list = header.nextElementSibling;
-      if (list && list.classList.contains("song-list")) {
-        const headerRect = header.getBoundingClientRect();
-        const listRect = list.getBoundingClientRect();
-
-        if (headerRect.bottom - listRect.top > 1) {
-          header.classList.add("box-shadow");
-          currentHeader = headersArray.indexOf(header)
-        } else {
-          header.classList.remove("box-shadow");
-        }
-      }
-    });
-  }
-  
-    // Update headers on scroll
-    document.addEventListener("scroll", updateHeaders);
-    document.addEventListener("scroll", getCurrentHeader);
-  
-    // Initial update
-    updateHeaders();
-  
-    // Initial position update for arrow buttons
-    updateArrowButtonsPosition();
-
-    // Function to scroll to the next header
+    // Function to scroll to prev/next header
     function scrollHeader(index) {
-      getCurrentHeader()
-      index = currentHeader + index
-      if (index >= 0 && index < headersArray.length) {
-        window.scrollTo({ top: 0})
-        const targetHeader = headersArray[index];
-        targetHeader.scrollIntoView();
+      index = currentHeader + index;
+      if (index < headersArray.length) {
+        window.scrollTo({top: 0});
+        headersArray[index<0? 0: index].scrollIntoView();
       }
       updateHeaders();
     }
 
-
-    function getCurrentHeader() {
-      let minTop = Infinity;
+    // Update headers shadows, store currently topmost header
+    function updateHeaders() {
       headersArray.forEach(header => {
         const headerRect = header.getBoundingClientRect();
-        if (headerRect.top > -40 && headerRect.top < minTop) {
-          minTop = headerRect.top;
+        // Find and save current header
+        if (headerRect.top >= -40 && headerRect.top < 2) {
           currentHeader = headersArray.indexOf(header);
+          // Apply shadow
+          const overlaps = headerRect.bottom - header.nextElementSibling.getBoundingClientRect().top > 1
+          overlaps ?   header.classList.add("box-shadow") :   header.classList.remove("box-shadow");
+        } else {
+          header.classList.remove("box-shadow");
         }
       });
     }
+      
 
-
-
-    // Add event listeners for next-button and prev-button
-    document.getElementById("next-button").addEventListener("click", () => scrollHeader(+1));
-    document.getElementById("prev-button").addEventListener("click", () => scrollHeader(-1));
   </script>
 </body>
 </html>
